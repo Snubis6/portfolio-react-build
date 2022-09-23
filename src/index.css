@@ -1,0 +1,252 @@
+:root {
+  --green: rgb(126, 81, 22);
+  --light-green: rgb(172, 198, 201);
+  --light-grey: #f1f1f4;
+  --text-color-light: #f1f1f1;
+  --text-color-dark: #333;
+  --text-color-danger: rgb(152, 58, 58);
+  --white: rgba(194, 136, 97, 0.151);
+
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*==================== Navigation ========================*/
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 50vh;
+  margin: 0 2vw 0 0; 
+  top: 25vh;
+  position: fixed;
+  right: 0;
+  z-index: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.1vw;
+  height: 1.7vw;
+  width: 1.7vw;
+  border-radius: 50%;
+  background-color: #F99339;
+  transition: width 0.8s, visibility 0.8s, border-radius 1s;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0);
+  right: 0;
+  z-index: 1;
+}
+
+.active {
+  color: black;
+  width: 7vw;
+  border-radius: 1vw;
+  text-align: center;
+  visibility: visible;
+  float: right;
+}
+
+.navLine{
+  stroke:rgb(126, 126, 126);
+  stroke-width:3;
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  
+}
+
+.socialNav{
+  display: flex;
+  flex-direction: column;
+  float: left;
+  height: 10vw;
+  justify-content: space-around;
+  top: 40vh;
+  position: fixed;
+  
+}
+
+.socialNav img{
+  width: 3.5vw;
+  height: auto;
+}
+
+/*====================== Welcome Page ==========================*/
+html  {
+  background-image: linear-gradient(to left, #bcbcbc, #f1f0f0);
+}
+
+.myFace{
+  left: 5vw;
+  z-index: 0;
+  height: auto;
+  width: 29.75vw;
+  top: 7.7vh;
+  position: fixed;
+}
+
+.welcomeTextBox{
+  font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  text-align: center;
+  margin-right: 17vw;
+  margin-top: 5vh;
+  background-color: rgba(194, 136, 97, 0.151);
+  padding: 2.5vw;
+  border-radius: 1.5vw;
+  width: 35vw;
+
+}
+
+.welcomeTextBox h1 {
+  font-size: 2.2vw;
+}
+
+.welcomeTextBox h2 {
+  font-size: 1.2vw;
+}
+
+/*====================== About Me Page ==========================*/
+
+.aboutMeBox{
+  font-size: 1vw;
+  background-color: rgba(194, 136, 97, 0.151);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2vh 10vw 0 10vw;
+  border-radius: 1.5vw; 
+  justify-content: space-around;
+  height: fit-content;
+  
+  
+}
+
+
+.aboutMe{
+  margin: 0 10vw 0 10vw;  
+  border-bottom: solid rgba(51, 51, 51, 0.548);  
+  border-radius: 1.5vw; 
+}
+
+.skills, .softSkills{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+
+.softSkills{
+  color: #5c5b5b;
+  
+}
+
+.programming, .uX, .design{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 13vw;
+}
+
+
+
+
+/*======================== Projects Page ==============================*/
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin: 0 10vw 0 10vw;
+  
+}
+@media (min-width: 600px) {
+  .grid-container {
+      grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.grid-container > article {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 1.5em;
+  background-color: var(--white);
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  cursor: pointer;
+}
+
+.grid-container > article:hover {
+  box-shadow: 0 8px 16px 0 var(--green);
+}
+
+.grid-container > article img {
+  width: 20vw;
+  height: auto;
+  object-fit: cover;
+}
+.projectsPageText h1 {
+  text-align: center;
+  margin: 5vh 0 5vh 0;
+}
+/*======================== About Project Page ==============================*/
+
+.wb-block-image, .size-large img  {
+  width: 15vw;
+  height: auto;
+  text-align: left;
+}
+.wp-container-2, .wp-block-gallery-1, .wp-block-gallery, .has-nested-images, .columns-default, .is-cropped{
+  display: flex;
+  flex-direction: column;
+}
+.wb-block-image, .size-large:nth-child(2n) img {
+  float:right;
+}
+
+.client-row {
+  background: rgb(241, 241, 244);
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.client-row > article {
+  padding: 40px;
+  background: rgb(241, 241, 244);
+  max-width: 400px;
+  margin: auto 0 auto auto;
+  text-align: right;
+}
+.client-row:nth-child(2n) > article {
+  text-align: left;
+  margin: auto auto auto 0;
+}
+/*======================== About Project Page - END ==============================*/
