@@ -7,7 +7,6 @@ export default function WelcomePage() {
             <section className="welcomeTextBox">
                 <h1>Hi! I am Valentinas Markulis</h1>
                 <h2>I am a multimedia design student at Buiseness Academy Aarhus, with a big passion for programming, striving to become full-stack developer.</h2>
-                <p></p>
             </section>
         </main>
 

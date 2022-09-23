@@ -81,8 +81,9 @@ nav a {
   height: 10vw;
   justify-content: space-around;
   top: 40vh;
+  left: 1vw;
   position: fixed;
-  
+  background-color: rgba(194, 136, 97, 0.151);
 }
 
 .socialNav img{
@@ -92,7 +93,7 @@ nav a {
 
 /*====================== Welcome Page ==========================*/
 html  {
-  background-image: linear-gradient(to left, #bcbcbc, #f1f0f0);
+  background-color: #f1f0f0;
 }
 
 .myFace{
@@ -100,7 +101,7 @@ html  {
   z-index: 0;
   height: auto;
   width: 29.75vw;
-  top: 7.7vh;
+  bottom: 0;
   position: fixed;
 }
 
@@ -109,22 +110,22 @@ html  {
   display: flex;
   flex-direction: column;
   float: right;
-  text-align: center;
-  margin-right: 17vw;
-  margin-top: 5vh;
+  text-align: left;
+  margin-right: 10vw;
+  margin-top: 10vh;
   background-color: rgba(194, 136, 97, 0.151);
-  padding: 2.5vw;
+  padding: 1vw;
   border-radius: 1.5vw;
-  width: 35vw;
+  width: 50vw;
 
 }
 
 .welcomeTextBox h1 {
-  font-size: 2.2vw;
+  font-size: 4.2vw;
 }
 
 .welcomeTextBox h2 {
-  font-size: 1.2vw;
+  font-size: 2vw;
 }
 
 /*====================== About Me Page ==========================*/
