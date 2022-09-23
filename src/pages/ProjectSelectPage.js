@@ -6,7 +6,7 @@ export default function ProjectSelectPage() {
     const [project, setProject] = useState({});
     const params = useParams();
     const slug = params.slug;
-
+    
 
     useEffect(() => {
         async function getData(){
@@ -14,6 +14,7 @@ export default function ProjectSelectPage() {
             const res = await fetch(url);
             const data = await res.json();
             setProject(data[0]);
+            console.log(data);
         }
         getData();
     }, [slug]);
@@ -26,6 +27,7 @@ export default function ProjectSelectPage() {
                 <article>
                     <h1>{project.title && parse(project.title.rendered)}</h1>
                     <article>{project.content && parse(project.content.rendered)}</article>
+                    {project.acf?.logo && <img src={project.acf.logo.url}/>}
                 </article>
             </section>
         </section>

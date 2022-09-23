@@ -48,7 +48,7 @@ nav a {
   height: 1.7vw;
   width: 1.7vw;
   border-radius: 50%;
-  background-color: #F99339;
+  background-color: #FA9339;
   transition: width 0.8s, visibility 0.8s, border-radius 1s;
   overflow: hidden;
   color: rgba(0, 0, 0, 0);
@@ -70,6 +70,7 @@ nav a {
   stroke-width:3;
   position: absolute;
   z-index: 0;
+
   right: 0;
   
 }
@@ -82,8 +83,9 @@ nav a {
   justify-content: space-around;
   top: 40vh;
   left: 1vw;
+  
   position: fixed;
-  background-color: rgba(194, 136, 97, 0.151);
+  
 }
 
 .socialNav img{
@@ -97,7 +99,7 @@ html  {
 }
 
 .myFace{
-  left: 5vw;
+  left: 4vw;
   z-index: 0;
   height: auto;
   width: 29.75vw;
@@ -111,12 +113,11 @@ html  {
   flex-direction: column;
   float: right;
   text-align: left;
-  margin-right: 10vw;
+  margin-right: 9.5vw;
   margin-top: 10vh;
-  background-color: rgba(194, 136, 97, 0.151);
   padding: 1vw;
   border-radius: 1.5vw;
-  width: 50vw;
+  width: 56vw;
 
 }
 
@@ -127,51 +128,119 @@ html  {
 .welcomeTextBox h2 {
   font-size: 2vw;
 }
+.welcomeTextBox h1 span {
+  color: #0093B3;
+  text-shadow: 1vw 0.9vw 0.5vw #FA9339 ;
+}
+.welcomeTextBox h2 span {
+  color: #0093B3;
+  text-decoration: underline solid #FA9339;
+}
+
 
 /*====================== About Me Page ==========================*/
 
-.aboutMeBox{
-  font-size: 1vw;
-  background-color: rgba(194, 136, 97, 0.151);
-  text-align: center;
+.aboutHeader{
   display: flex;
   flex-direction: column;
-  margin: 2vh 10vw 0 10vw;
-  border-radius: 1.5vw; 
-  justify-content: space-around;
-  height: fit-content;
-  
-  
+  width: 100%;
+  margin-bottom: 6rem;
 }
-
+.aboutTitle{
+  text-align: center;
+}
+.aboutMe, .aboutTitle{
+  width: 60vw;
+  margin: 0 20vw 0 20vw;
+  font-size: 4vw;
+}
 
 .aboutMe{
-  margin: 0 10vw 0 10vw;  
-  border-bottom: solid rgba(51, 51, 51, 0.548);  
-  border-radius: 1.5vw; 
+  font-size: 1.5vw;
 }
 
-.skills, .softSkills{
+.colorLegend1, .markColorLegend1::marker{
+  color: #FA9339;
+  font-size: 2.1vw;
+  
+}
+.colorLegend2, .markColorLegend2::marker{
+  color: #2ADAFF;
+  font-size: 2.1vw;
+}
+.colorLegend3, .markColorLegend3::marker{
+  color: #0093B3;
+  font-size: 2.1vw;
+}
+.colorLegend4, .markColorLegend4::marker{
+  color: #FFC28C;
+  font-size: 2.1vw;
+}
+.colorLegend5, .markColorLegend5::marker{
+  color: #AD5100;
+  font-size: 2.1vw;
+}
+.colorLegend6, .markColorLegend6::marker{
+  color: #1763aa;
+  font-size: 2.1vw;
+}
+.colorLegend7, .markColorLegend7::marker{
+  color: #026f88;
+  font-size: 2.1vw;
+}
+
+.progArticle{
+  width: 80vw;
+  margin: 0 10vw 20rem 10vw;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  
+  border-bottom: solid #0093B3 ;
+  border-top: solid #0093B3 ;
+  border-radius: 15vh;
 }
 
-.softSkills{
-  color: #5c5b5b;
-  
-}
-
-.programming, .uX, .design{
+.progArticleLeft{
   display: flex;
   flex-direction: column;
-  text-align: left;
-  width: 13vw;
+  justify-content: center;
 }
 
 
+.progArticle h2{
+  font-size: 2.5vw;
+  
+}
+.pieChart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pieChart img{
 
+  width: 27vw;
+  height: auto;
+}
+
+.subsetItems{
+  font-size: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 1em;
+  padding: 1em;
+}
+.skillDesc ul{
+  margin: 0vh 0 2vh 0;
+  
+}
+.skillDesc{
+  display: flex;
+  flex-direction: column;
+}
+
+.skillRating{  
+  border-top: solid #FA9339;
+}
 
 /*======================== Projects Page ==============================*/
 
