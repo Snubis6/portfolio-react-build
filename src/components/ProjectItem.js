@@ -12,8 +12,10 @@ export default function Projectitem({ project }) {
     return (
         <article onClick={() => navigate(project.slug)}>
             <img src={image} alt={project.title.rendered} />
-            <h1>{parse(project.title.rendered)}</h1>
-            {parse(project.excerpt.rendered)}
+            <section className="projectIntroBox">
+                <h1>{parse(project.title.rendered)}</h1>
+                {parse(project.excerpt.rendered)}
+            </section>
             {/* {project.acf?.webiste_url}
             {project.acf.logo && <img src={project.acf.logo.url}/>} */}
         </article>

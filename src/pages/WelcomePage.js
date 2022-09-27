@@ -1,6 +1,9 @@
 export default function WelcomePage() {
     return (
         <main>
+            <section>
+                
+            </section>
             <section className="welcomeImage">
                 <img className="myFace" src="img/welcomeFace2.png" alt="myFace"/>
             </section>

@@ -1,5 +1,5 @@
 :root {
-  --green: rgb(126, 81, 22);
+  --green: #1763aa;
   --light-green: rgb(172, 198, 201);
   --light-grey: #f1f1f4;
   --text-color-light: #f1f1f1;
@@ -9,8 +9,14 @@
 
 }
 
-html {
-  height: 100%;
+@font-face {
+  font-family: "ChakraPetch";
+  src: url("../public/fonts/ChakraPetch-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ChakraPetch-italic";
+  src: url("../public/fonts/ChakraPetch-MediumItalic.ttf");
 }
 
 body {
@@ -27,6 +33,12 @@ code {
     monospace;
 }
 
+a, p, li, b{
+  font-family: "ChakraPetch";
+}
+h1,h2{
+  font-family: "ChakraPetch-italic";
+}
 /*==================== Navigation ========================*/
 
 nav {
@@ -82,14 +94,26 @@ nav a {
   height: 10vw;
   justify-content: space-around;
   top: 40vh;
-  left: 1vw;
-  
+  left: 0;  
+  position: fixed;  
+}
+
+.contactMeBox{
   position: fixed;
-  
+  display: flex;
+  flex-direction: column;
+  bottom: 3vh;
+  right: 1.2vh;
+}
+
+.contactMeBox img{
+  width: 3.5vw;
+  height: auto;
 }
 
 .socialNav img{
-  width: 3.5vw;
+  width: 3vw;
+  padding: 1vw;
   height: auto;
 }
 
@@ -143,21 +167,50 @@ html  {
 .aboutHeader{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   margin-bottom: 6rem;
 }
+
 .aboutTitle{
   text-align: center;
+  font-size: 3vw;
 }
+
 .aboutMe, .aboutTitle{
   width: 60vw;
   margin: 0 20vw 0 20vw;
-  font-size: 4vw;
+}
+
+.aboutMeIntro {
+  width: 60vw;
+  margin: 0 20vw 0 20vw;
+  font-size: 1.2vw;
+}
+
+.aboutMeSkills {
+  width: 60vw;
+  margin: 10vh 0 0 0;
+  font-size: 1.2vw;
+  border-left: solid #FA9339;
+  border-right: solid #FA9339;
+  padding: 0 2vh 0 2vh;
+  text-align: center;
+}
+
+.svgArrowDown {
+  margin: 5vh 0 5vh 0;
+  width:10vh;
 }
 
 .aboutMe{
-  font-size: 1.5vw;
+  font-size: 1.4vw;
+  border-bottom: solid #0093B3;
+  margin-bottom: 10vh;
 }
+
+
 
 .colorLegend1, .markColorLegend1::marker{
   color: #FA9339;
@@ -190,8 +243,8 @@ html  {
 }
 
 .progArticle{
-  width: 80vw;
-  margin: 0 10vw 20rem 10vw;
+  width: 70vw;
+  margin: 0 15vw 20rem 15vw;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -218,12 +271,12 @@ html  {
 }
 .pieChart img{
 
-  width: 27vw;
+  width: 22vw;
   height: auto;
 }
 
 .subsetItems{
-  font-size: 1vw;
+  font-size: 1.2vw;
   display: grid;
   grid-template-columns: 1fr 1fr ;
   gap: 1em;
@@ -231,23 +284,38 @@ html  {
 }
 .skillDesc ul{
   margin: 0vh 0 2vh 0;
-  
 }
 .skillDesc{
   display: flex;
   flex-direction: column;
 }
-
+.skillDesc span{
+  font-size: 1.9vw;
+}
 .skillRating{  
   border-top: solid #FA9339;
+  font-size: 1.1vw;
+  padding-bottom: 0;
 }
+.cvSection{
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cvSection img{
+  margin-left: 2vw;
+  width: 3vw;
+  height: auto;
+}
+
 
 /*======================== Projects Page ==============================*/
 
 .grid-container{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1em;
+  display: flex;
+  flex-direction: column ;
+  gap: 2rem;
   margin: 0 10vw 0 10vw;
   
 }
@@ -264,14 +332,30 @@ html  {
   }
 }
 
+.projectIntroBox h1{
+  font-size: 2vw;
+  color:#1763aa;
+}
+
+.projectIntroBox{
+  width: 35vw;
+}
+
+.projectIntroBox > article {
+  display: flex;
+}
+
 .grid-container > article {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-  text-align: center;
+  display: flex;
+  flex-direction: row;
   padding: 1.5em;
   background-color: var(--white);
   transition: 0.5s;
   animation: fadeIn 0.5s;
   cursor: pointer;
+  
+  justify-content: space-around;
 }
 
 .grid-container > article:hover {
@@ -281,7 +365,6 @@ html  {
 .grid-container > article img {
   width: 20vw;
   height: auto;
-  object-fit: cover;
 }
 .projectsPageText h1 {
   text-align: center;
@@ -289,34 +372,64 @@ html  {
 }
 /*======================== About Project Page ==============================*/
 
-.wb-block-image, .size-large img  {
-  width: 15vw;
-  height: auto;
-  text-align: left;
-}
-.wp-container-2, .wp-block-gallery-1, .wp-block-gallery, .has-nested-images, .columns-default, .is-cropped{
+.post-row {
   display: flex;
   flex-direction: column;
-}
-.wb-block-image, .size-large:nth-child(2n) img {
-  float:right;
-}
-
-.client-row {
-  background: rgb(241, 241, 244);
-  margin-bottom: 40px;
-  overflow: hidden;
+  justify-content: center;
+  font-size: 1vw;
 }
 
-.client-row > article {
-  padding: 40px;
-  background: rgb(241, 241, 244);
-  max-width: 400px;
-  margin: auto 0 auto auto;
-  text-align: right;
+.projectBackBtn{
+  
+  position: absolute;
+  top: 12vh;
+  left: 7.5vw;
 }
-.client-row:nth-child(2n) > article {
-  text-align: left;
-  margin: auto auto auto 0;
+
+.projectBackBtn img{
+  width: 3vw;
+  height: auto;
 }
+
+.rowLeft{
+  margin-right: 5vw;
+  border-right: solid #FA9339 ;
+  flex-wrap: wrap;
+  width: 18vw;
+}
+.rowRight{
+  width: 52vw;
+}
+.usefulLinksBox{
+  margin: 10vh 0 0 0;
+}
+.rowLeftTextBox div{
+  margin-top: 5vh;
+}
+.usefulLinks{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+.usefulLinks img{
+  width: 5vw;
+  height: auto;
+  margin: 3vh 2vw 0 0;
+}
+.articleRow {
+  display: flex;
+  flex-direction: row;
+  margin: 0 5vw 0 10vw;
+}
+
+.post-row h1 {
+  text-align: center;
+  margin-bottom: 5vh;
+  font-size: 4vw;
+  color: #1763aa;
+}
+
+
+
 /*======================== About Project Page - END ==============================*/
